@@ -33,7 +33,7 @@ const MtgCard = () => {
             <input list="cardlist" name="cards" id="cards" value={inputVal} onChange={(event) => inputChange(event)}/>
             <button onClick={() => daCard()}>Press me</button>
             <datalist id="cardlist">
-                {filteredList.map((name, key) => inputVal.length > 3 ? <option key={key} value={name} /> : null)}
+                {filteredList.map((name, key) => inputVal.length > 2 && key < 50? <option key={key} value={name} /> : null)}
             </datalist>
             {!error ? 
                 <div> 
